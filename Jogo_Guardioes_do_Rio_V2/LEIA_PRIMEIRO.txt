@@ -1,0 +1,61 @@
+GUARDIÕES DO RIO — VERSÃO 2.0
+JOGO MULTIJOGADOR DE QUÍMICA + EDUCAÇÃO AMBIENTAL
+
+IMPORTANTE: ESTA VERSÃO CORRIGE A ARQUITETURA DO MULTIJOGADOR.
+O jogo agora usa um servidor central HTTP/HTTPS para coordenar os participantes.
+O arquivo index.html isolado ou uma hospedagem exclusivamente estática
+(Netlify Drop, GitHub Pages) NÃO são suficientes para o jogo multijogador.
+
+FUNÇÕES
+- O anfitrião escolhe a quantidade de jogadores (2 a 10.000), OU 'Sem limite'.
+- O anfitrião pode ajustar o limite na sala de espera.
+- Cada jogador entra pelo link e informa seu nome; sem cadastro.
+- 72 perguntas no banco, sendo 24 fáceis, 24 médias e 24 difíceis.
+- Cada partida tem exatamente 12 perguntas: 4 de cada nível.
+- Novas partidas priorizam perguntas não utilizadas na mesma sala.
+- 20, 30, 40, 60 ou 90 segundos por questão, conforme o anfitrião.
+- Pontuação individual, pontuação coletiva e rio animado.
+- Compatível com celulares e computadores.
+
+COMO COLOCAR ONLINE
+1. Descompacte este ZIP.
+2. Crie um repositório no GitHub e envie OS ARQUIVOS do pacote
+   (server.js, questions.js, package.json, render.yaml e pasta public).
+3. Entre em https://dashboard.render.com e escolha New > Web Service.
+4. Conecte o repositório; selecione Node e plano Free.
+5. Build Command: npm install
+6. Start Command: npm start
+7. Após o status Live, copie a URL https://...onrender.com gerada.
+8. Envie ESSE link aos seus colegas (não envie o link do site antigo).
+
+Se o Render solicitar Root Directory, deixe em branco se os arquivos
+server.js e package.json estiverem na raiz do repositório.
+
+PARA JOGAR
+- Anfitrião: abra o link > Criar uma sala > digite nome > escolha
+  quantidade e tempo > Criar > Copiar link.
+- Colegas: abrem o link copiado > digitam nome > Entrar na sala.
+- Quando houver 2 ou mais conectados, o anfitrião inicia a partida.
+- Todos respondem ao mesmo tempo. Cada rodada possui 12 questões.
+- Após a resposta, todos veem a explicação e o impacto ambiental.
+- No final, o anfitrião pode jogar novamente para sortear novas perguntas.
+
+PARA TESTAR NO COMPUTADOR (opcional)
+Instale Node.js 20 ou mais recente. Na pasta do jogo execute:
+  npm start
+Abra no navegador:
+  http://localhost:3000
+Para que colegas em redes diferentes entrem, é preciso publicar na internet.
+
+O Render Free pode desligar o servidor após 15 min sem tráfego e
+não preserva salas depois de reinícios. Para uma aula, recomendo criar
+a sala pouco antes de começar e manter pelo menos uma página aberta.
+
+NÃO ENVIE SENHAS OU DADOS SENSÍVEIS PELOS CAMPOS DE NOME/SALA.
+As salas usam apenas um código de convite e nomes informais.
+
+Se algo der errado, abra o endereço /health do jogo; o servidor deve
+retornar um JSON com ok:true. Se aparecer uma página de erro no lugar,
+verifique no painel Render se o Web Service está 'Live'.
+
+O CÓDIGO-FONTE E AS PERGUNTAS SÃO EDITÁVEIS.
