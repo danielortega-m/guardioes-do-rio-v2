@@ -1,0 +1,48 @@
+GUARDIÕES DO RIO — VERSÃO 4.0
+JOGO MULTIJOGADOR DE QUÍMICA E EDUCAÇÃO AMBIENTAL
+
+NOVIDADES:
+- 200 perguntas válidas, revisadas e divididas em 5 faixas internas (40 por faixa).
+- Quatro níveis selecionáveis por quem cria a sala:
+  FÁCIL: 12 perguntas introdutórias, sobre o cotidiano, sem cálculos.
+  MÉDIO: 4 introdutórias e 8 básicas, conceitos iniciais de Química.
+  DIFÍCIL: 4 básicas, 4 intermediárias e 4 avançadas.
+  HARD: 4 avançadas e 8 de nível hard, incluindo cálculos e equilíbrios.
+- Sempre 12 perguntas por partida, sorteadas em ordem aleatória.
+- Nas próximas partidas da mesma sala, prioriza perguntas não usadas.
+- O nível inicial foi ajustado para FÁCIL.
+- Quantidade de jogadores continua configurável, inclusive SEM LIMITE.
+- Sistema de salas via servidor HTTPS, como nas versões anteriores.
+
+ATUALIZAR O JOGO QUE JÁ ESTÁ NO RENDER:
+1. Extraia o ZIP de atualização para uma pasta no computador.
+2. Entre em: https://github.com/danielortega-m/guardioes-do-rio-v2/upload/main
+3. Arraste a pasta INTEIRA `Jogo_Guardioes_do_Rio_V2` para o GitHub.
+   Ela deve permanecer com esse nome, pois é o Root Directory usado no Render.
+4. Confira que os arquivos aparecem dentro dessa pasta, não na raiz.
+5. Clique em Commit changes.
+6. No Render do jogo existente, verifique se iniciou uma nova publicação.
+   Se necessário: Manual Deploy > Deploy latest commit.
+7. Após o status Live, abra a URL antiga do jogo e recarregue (Ctrl+F5).
+8. A tela deve indicar V4 e 200 perguntas. Crie uma sala NOVA.
+
+NÃO é necessário criar novo repositório, novo serviço ou novo link no Render.
+NÃO envie o ZIP fechado para o GitHub.
+
+COMO VERIFICAR SE ATUALIZOU:
+Abra https://SEU-SERVICO.onrender.com/health
+A resposta deve conter: "ok":true, "version":4, "questions":200.
+
+IMPORTANTE: o deploy reinicia o processo e apaga as salas temporárias antigas.
+Os convidados não precisam de cadastro; todos entram no mesmo link de convite.
+Se o Render gratuito estiver dormindo, a primeira abertura pode demorar.
+
+ARQUIVOS MAIS IMPORTANTES:
+Jogo_Guardioes_do_Rio_V2/server.js
+Jogo_Guardioes_do_Rio_V2/questions.js
+Jogo_Guardioes_do_Rio_V2/public/client.js
+Jogo_Guardioes_do_Rio_V2/public/index.html
+Jogo_Guardioes_do_Rio_V2/package.json
+
+Os testes automatizados locais foram executados com `npm test`:
+7 testes aprovados (banco, níveis, partidas, sorteio, permissões e interface).
