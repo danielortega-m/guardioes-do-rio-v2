@@ -1,0 +1,26 @@
+ATUALIZAÇÃO DO GUARDIÕES DO RIO — V3 (4 NÍVEIS)
+
+VOCÊ NÃO PRECISA CRIAR OUTRO REPOSITÓRIO OU OUTRO SERVIÇO NO RENDER.
+
+1. Extraia este ZIP no computador.
+2. Abra https://github.com/danielortega-m/guardioes-do-rio-v2/upload/main
+3. Arraste A PASTA INTEIRA `Jogo_Guardioes_do_Rio_V2` para a área de upload.
+   Muito importante: arraste a pasta, NÃO só os arquivos de dentro dela.
+   O Render já foi configurado com Root Directory `Jogo_Guardioes_do_Rio_V2`.
+4. O GitHub deve listar os arquivos para ATUALIZAR, com o caminho
+   Jogo_Guardioes_do_Rio_V2/server.js
+   Jogo_Guardioes_do_Rio_V2/questions.js
+   Jogo_Guardioes_do_Rio_V2/public/client.js
+   Jogo_Guardioes_do_Rio_V2/public/index.html
+   Jogo_Guardioes_do_Rio_V2/package.json
+5. Clique em Commit changes.
+6. Acesse seu serviço já existente no https://dashboard.render.com
+   Se não acontecer novo deploy automático, use Manual Deploy > Deploy latest commit.
+7. Quando aparecer Live, abra o endereço do jogo que você já usa.
+   Se mostrar a versão antiga, atualize com Ctrl + F5.
+8. Crie uma NOVA sala, escolha Fácil / Médio / Difícil / Hard.
+   A versão atualizada tem 120 perguntas e sorteia 12 por partida.
+
+OBS.: Ao publicar, salas antigas são encerradas porque o servidor é reiniciado.
+
+TESTES: 7 testes de integração automatizados passaram.
